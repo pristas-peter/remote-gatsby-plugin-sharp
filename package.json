@@ -1,0 +1,27 @@
+{
+  "name": "remote-gatsby-plugin-sharp",
+  "version": "1.0.0",
+  "description": "API server which acts as a gatsby-plugin-sharp rpc",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "remote-gatsby-plugin-sharp": "./index.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "peerDependencies": {
+    "gatsby": "^2.0.0",
+    "gatsby-plugin-sharp": "^2.0.0",
+    "gatsby-source-filesystem": "^2.0.0",
+    "gatsby-transformer-sharp": "^2.0.0"
+  },
+  "dependencies": {
+    "@types/fs-extra": "5.0.5",
+    "argparse": "1.0.10",
+    "axios": "0.18.0",
+    "express": "4.16.4",
+    "fs-extra": "7.0.1"
+  }
+}
