@@ -75,7 +75,7 @@ module.exports = (downloadDir) => (request, response) => {
             return createFileNode(filepath, id => id);
         })
         .then(node => {
-            return plugin[fn]({file: node, args: options, fileArgs: []Â});
+            return plugin[fn]({file: node, args: options, fileArgs: []});
         })
         .then(output => {
             response.setHeader('Content-Type', 'application/json');
