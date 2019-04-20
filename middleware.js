@@ -50,9 +50,9 @@ function download(url, dir) {
 }
 
 module.exports = (downloadDir) => (request, response) => {
-    const {fn, file, options} = request.body;
+    const {fn, file, args, fileArgs = []} = request.body;
 
-    transformArgs(options);
+    transformArgs(args);
 
     let url;
 
@@ -75,7 +75,7 @@ module.exports = (downloadDir) => (request, response) => {
             return createFileNode(filepath, id => id);
         })
         .then(node => {
-            return plugin[fn]({file: node, args: options, fileArgs: []});
+            return plugin[fn]({file: node, args, fileArgs});
         })
         .then(output => {
             response.setHeader('Content-Type', 'application/json');
